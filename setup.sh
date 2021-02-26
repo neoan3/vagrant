@@ -30,6 +30,7 @@
     NEOAN_APP=/var/www/html/version.json
     if [ ! -f "$NEOAN_APP" ]; then
         cd /var/www/html
+        rm /var/www/html/index.html
         sudo -u vagrant -i neoan3 new app
         echo "Installing neoan3"
     fi
