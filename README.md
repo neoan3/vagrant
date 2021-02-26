@@ -15,7 +15,7 @@ The virtualization includes a MySQL database, the neoan3 cli tool including.
 - - e.g. `mkdir ~/projects/neoan3`
 - from within your empty project
 - - e.g. `cd ~/projects/neoan3`
-- download this repos Vagrantfile
+- download this repo's Vagrantfile
 - - e.g. `curl -sS https://raw.githubusercontent.com/neoan3/vagrant/main/Vagrantfile -o Vagrantfile`
 - run `vagrant up`
 - enjoy
