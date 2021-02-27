@@ -7,12 +7,16 @@
     apt-get -qq install -y mysql-server
 
     # Create default database
-    echo "** 2/6 Create default database neoan3 **"
+    echo "** 2/6 Create & Setup default database neoan3 **"
     mysql -e \"create database neoan3\"
+    mysql -e \"create user 'neoan3'@'localhost'\"
+    mysql -e \"grant all privileges on neoan3.* to 'neoan3'@'localhost'\"
+    mysql -e \"flush privileges"
 
     # Install PHP8 & modules
     echo "** 3/6 Install PHP8 & modules **"
     apt-get -qq install -y php8.0 libapache2-mod-php8.0 php8.0-{mysql,zip,xml,curl,mbstring} curl git
+    apt-get upgrade
 
     # Install & setup Composer
     echo "** 4/6 Install & Setup composer**"
@@ -23,7 +27,7 @@
     echo "** 5/6 Install & Setup neoan3 cli**"
     sudo -u vagrant -i composer global require neoan3/neoan3
     mkdir /credentials
-    echo "{\"testing_db\":{\"host\":\"localhost\",\"user\":\"root\",\"name\":\"neoan3\",\"assume_uuids\":true}}" > /credentials/credentials.json
+    echo '{\"testing_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assume_uuids\":true}}' > /credentials/credentials.json
     chown vagrant:vagrant -R /credentials
     echo "PATH=$PATH:/home/vagrant/.config/composer/vendor/bin" >> /home/vagrant/.profile
     echo "cd /var/www/html" >> /home/vagrant/.profile
