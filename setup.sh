@@ -27,7 +27,7 @@
     echo "** 5/6 Install & Setup neoan3 cli**"
     sudo -u vagrant -i composer global require neoan3/neoan3
     mkdir /credentials
-    echo "{\"testing_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assume_uuids\":true}}" > /credentials/credentials.json
+    echo '{\"testing_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assume_uuids\":true}}' > /credentials/credentials.json
     chown vagrant:vagrant -R /credentials
     echo "PATH=$PATH:/home/vagrant/.config/composer/vendor/bin" >> /home/vagrant/.profile
     echo "cd /var/www/html" >> /home/vagrant/.profile
