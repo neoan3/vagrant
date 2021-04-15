@@ -43,22 +43,22 @@
 
     # Configure Apache
     echo \"** 6/6 configure Apache** \"
-    echo \"<VirtualHost *:80>
+    echo \"\<VirtualHost *:80\>
         DocumentRoot /var/www/html
         AllowEncodedSlashes On
-        <Directory /var/www/html>
+        \<Directory /var/www/html\>
             Options +Indexes +FollowSymLinks
             DirectoryIndex index.php index.html
             Order allow,deny
             Allow from all
             AllowOverride All
-            <IfModule php_module>
+            \<IfModule php_module\>
                     AddHandler application/x-httpd-php .php
-            </IfModule>
-        </Directory>
+            \</IfModule\>
+        \</Directory\>
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>" > /etc/apache2/sites-available/000-default.conf
+    \</VirtualHost\>\" > /etc/apache2/sites-available/000-default.conf
     a2enmod rewrite
     service apache2 restart
     echo \"** neoan3 box running... visit http://192.168.33.10 in your browser for to view the application ** \"
