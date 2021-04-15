@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+
 
     # Install apache server , mysql
     echo \"** 1/6 Install Apache & MySQL ** \"
