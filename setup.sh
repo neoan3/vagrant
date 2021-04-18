@@ -10,10 +10,10 @@
 
     # Create default database
     echo "** 2/6 Create & Setup default database neoan3 ** "
-    mysql -e "create database neoan3\ "
-    mysql -e "create user 'neoan3'@'localhost'\ "
-    mysql -e "grant all privileges on neoan3.* to 'neoan3'@'localhost'\ "
-    mysql -e "flush privileges "
+    mysql -e "create database neoan3"
+    mysql -e "create user 'neoan3'@'localhost'"
+    mysql -e "grant all privileges on neoan3.* to 'neoan3'@'localhost'"
+    mysql -e "flush privileges"
 
     # Install PHP8 & modules
     echo "** 3/6 Install PHP8 & modules ** "
