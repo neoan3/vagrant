@@ -27,6 +27,7 @@
 
     # Install & setup neoan3 cli
     echo "** 5/6 Install & Setup neoan3 cli** "
+    sudo touch /var/www/.safe-space
     sudo -u vagrant -i composer global require neoan3/neoan3
     mkdir /credentials
     echo '{\"testing_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assumes_uuid\":true}}' > /credentials/credentials.json
