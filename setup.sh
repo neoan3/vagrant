@@ -18,6 +18,12 @@
     # Install PHP8 & modules
     echo "** 3/6 Install PHP8 & modules ** "
     apt-get -qq install -y php8.0 libapache2-mod-php8.0 php8.0-{mysql,zip,xml,curl,mbstring,xdebug} curl git
+    echo "
+      zend_extension=xdebug.so
+      xdebug.mode=debug,coverage
+      xdebug.client_host=192.168.33.10
+      xdebug.discover_client_host=true
+    " > /etc/php/8.0/mods-available/xdebug.ini
     apt-get upgrade
 
     # Install & setup Composer
