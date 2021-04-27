@@ -17,7 +17,7 @@
 
     # Install PHP8 & modules
     echo "** 3/6 Install PHP8 & modules ** "
-    apt-get -qq install -y php8.0 libapache2-mod-php8.0 php8.0-{mysql,zip,xml,curl,mbstring} curl git
+    apt-get -qq install -y php8.0 libapache2-mod-php8.0 php8.0-{mysql,zip,xml,curl,mbstring,xdebug} curl git
     apt-get upgrade
 
     # Install & setup Composer
