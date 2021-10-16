@@ -36,7 +36,7 @@
     sudo touch /var/www/.safe-space
     sudo -u vagrant -i composer global require neoan3/neoan3
     mkdir /credentials
-    echo "{\"testing_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assumes_uuid\":true}}" > /credentials/credentials.json
+    echo "{\"neoan3_db\":{\"host\":\"localhost\",\"user\":\"neoan3\",\"name\":\"neoan3\",\"assumes_uuid\":true}}" > /credentials/credentials.json
     chown vagrant:vagrant -R /credentials
     echo "PATH=$PATH:/home/vagrant/.config/composer/vendor/bin" >> /home/vagrant/.profile
     echo "cd /var/www/html" >> /home/vagrant/.profile
